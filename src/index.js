@@ -25,6 +25,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             $rootScope.goto = gotoInternal;
             $rootScope.gotoExternal = gotoExternal;
             $scope.releaseName = ""
+            $scope.updateReleaseName = updateReleaseName;
             // function to go to an internal link
             // takes in a link variable
             // redirects the page to an internal link
@@ -39,13 +40,9 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
                 $window.open(link);
             }
 
-            $scope.$watch('letter', function() {
-              console.log($scope.letter);
-              if ($scope.letter) {
-                $scope.releaseName = "Angry Aardvark";
-              } else {
-                $scope.releaseName = ""
-              }
-            });
+            function updateReleaseName() {
+              console.log("current letter: " + $scope.letter);
+              $scope.releaseName = "Angry Aardvark";
+            }
 
         }])
