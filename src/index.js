@@ -30,6 +30,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             // takes in a link variable
             // redirects the page to an internal link
             function gotoInternal(link) {
+                console.log('goto ' + link);
                 $location.path(link);
             }
 
