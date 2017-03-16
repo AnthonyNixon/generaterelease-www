@@ -41,8 +41,11 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             }
 
             function updateReleaseName() {
-              console.log("current letter: " + $scope.letter);
+              console.log("current letter scope: " + $scope.letter);
+              console.log("current letter rootscope: " + $rootScope.letter);
               $scope.releaseName = "Angry Aardvark";
+              $rootScope.releaseName = "Angry Aardvark";
+              debugger;
             }
 
         }])
