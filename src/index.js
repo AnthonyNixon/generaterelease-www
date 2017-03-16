@@ -41,12 +41,14 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
                 $window.open(link);
             }
 
+            function getReleaseName(letter) {
+              $http.get("http://api.releasegenerator.com/generaterelease?letter=" + letter)
+                .then(function(response){ $scope.releaseName = response.data; });
+            }
+
             function updateReleaseName() {
               console.log("current letter scope: " + $scope.letter);
-              console.log("current letter rootscope: " + $rootScope.letter);
-              $scope.releaseName = "Angry Aardvark";
-              $rootScope.releaseName = "Angry Aardvark";
-              debugger;
+              $scope.releaseName = getReleaseName($scope.letter)
             }
 
         }])
