@@ -1,0 +1,33 @@
+<html lang="en" ng-app="releaseGeneratorApp" ng-controller="rootCtrl">
+<head>
+    <title>Release Generator</title>
+     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<body>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://use.fontawesome.com/456054bd49.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="src/index.js"></script>
+
+    <!-- Start page body -->
+    <div class="wrapper">
+
+        <!-- Start Header -->
+        <md-toolbar layout="row" ng-include="'src/templates/header.html'">
+        </md-toolbar>
+        <!-- End Header -->
+
+        <!-- Start content injection -->
+        <div ng-view></div>
+        <!-- End content injection -->
+    </div>
+    <!-- End page body -->
+</body>
+</html>
