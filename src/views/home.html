@@ -1,10 +1,8 @@
-<md-content style="font-size:1.2em; max-width:90px; ">
-  <md-input-container>
+<md-input-container style="font-size:1.2em; max-width:90px; ">
     <label>Letter</label>
     <input ng-model="letter">
-  </md-input-container>
-  <md-button type="submit" ng-click="updateReleaseName()">Submit</md-button>
-</md-content>
+</md-input-container>
+<md-button type="submit" ng-click="updateReleaseName()">Submit</md-button>
 
 <div ng-if="releaseName">
 Maybe name your release <strong>{{releaseName}}</strong>
