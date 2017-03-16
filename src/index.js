@@ -40,7 +40,11 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             }
 
             $scope.$watch('letter', function() {
-              $scope.releaseName = "Angry Aardvark";
+              if ($scope.letter) {
+                $scope.releaseName = "Angry Aardvark";
+              } else {
+                $scope.releaseName = ""
+              }
             });
 
         }])
