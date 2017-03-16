@@ -42,13 +42,14 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             }
 
             function getReleaseName(letter) {
-              $http.get("http://api.releasegenerator.com/generaterelease?letter=" + letter)
+              $http.get("https://us-central1-releasegenerator.cloudfunctions.net/generaterelease?letter=" + letter)
                 .then(function(response){ $scope.releaseName = response.data; });
             }
 
             function updateReleaseName() {
               console.log("current letter scope: " + $scope.letter);
-              $scope.releaseName = getReleaseName($scope.letter)
+              console.log("current letter scope: " + $rootScope.letter);
+              $scope.releaseName = getReleaseName($scope.letter);
             }
 
         }])
