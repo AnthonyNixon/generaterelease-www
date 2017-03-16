@@ -1,4 +1,8 @@
 <md-input-container>
-  <label>Title</label>
-  <input ng-model="user.title">
+  <label>Letter</label>
+  <input ng-model="letter">
 </md-input-container>
+
+<div ng-if="releaseName">
+Maybe name your release <strong>{{releaseName}}</strong>
+</div>
