@@ -24,9 +24,6 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
         function ($scope, $location, $window, $http, $rootScope) {
             $rootScope.goto = gotoInternal;
             $rootScope.gotoExternal = gotoExternal;
-            $scope.releaseName = ""
-            $scope.letter = "";
-            $scope.updateReleaseName = updateReleaseName;
             // function to go to an internal link
             // takes in a link variable
             // redirects the page to an internal link
@@ -42,6 +39,14 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
                 $window.open(link);
             }
 
+        }])
+
+    .controller('searchCtrl', ['$scope', '$http',
+        function ($scope, $http) {
+            $scope.releaseName = ""
+            $scope.letter = "";
+            $scope.updateReleaseName = updateReleaseName;
+
             function getReleaseName(letter) {
               $http.get("https://us-central1-releasegenerator.cloudfunctions.net/generaterelease?letter=" + letter)
                 .then(function(response){ $scope.releaseName = response.data; });
@@ -49,8 +54,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
 
             function updateReleaseName() {
               console.log("current letter scope: " + $scope.letter);
-              console.log("current letter scope: " + $rootScope.letter);
               $scope.releaseName = getReleaseName($scope.letter);
             }
 
-        }])
+    }]);

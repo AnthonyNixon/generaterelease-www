@@ -1,9 +1,11 @@
-<md-input-container style="font-size:1.2em; max-width:90px; ">
-    <label>Letter</label>
-    <input ng-model="letter">
-</md-input-container>
-<md-button type="submit" ng-click="updateReleaseName()">Submit</md-button>
-current letter: {{letter}}
-<div ng-if="releaseName">
-Maybe name your release <strong>{{releaseName}}</strong>
-</div>
+<md-content ng-controller="searchCtrl">
+  <md-input-container style="font-size:1.2em; max-width:90px; ">
+      <label>Letter</label>
+      <input ng-model="letter">
+  </md-input-container>
+  <md-button type="submit" ng-click="updateReleaseName()">Submit</md-button>
+  current letter: {{letter}}
+  <div ng-if="releaseName">
+  Maybe name your release <strong>{{releaseName}}</strong>
+  </div>
+</md-content>
