@@ -1,6 +1,6 @@
 angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
 
-    .config(['$mdThemingProvider', '$routeProvider', function ($mdThemingProvider, $routeProvider) {
+    .config(['$mdThemingProvider', '$routeProvider', '$locationProvider', function ($mdThemingProvider, $routeProvider, $locationProvider) {
         //Set up theme for the site using Target Red
         $mdThemingProvider.theme('default')
             .primaryPalette('blue')
@@ -15,6 +15,8 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             return 'src/views/' + page + '.html';
         }
 
+        $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix('!');
     }])
 
     // Set up routeCtrl to act as the controller for route operations
