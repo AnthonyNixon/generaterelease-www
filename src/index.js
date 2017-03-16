@@ -1,4 +1,4 @@
-angular.module('releaseGeneratorApp', ['ngMaterial'])
+angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
 
     .config(['$mdThemingProvider', '$routeProvider', function ($mdThemingProvider, $routeProvider) {
         //Set up theme for the site using Target Red
@@ -20,7 +20,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial'])
     // Set up routeCtrl to act as the controller for route operations
     .controller('rootCtrl', ['$scope', '$location', '$window', '$http', '$rootScope',
         function ($scope, $location, $window, $http, $rootScope) {
-
+            console.log("hi. Rootctrl here.");
             $rootScope.goto = gotoInternal;
             $rootScope.gotoExternal = gotoExternal;
 
