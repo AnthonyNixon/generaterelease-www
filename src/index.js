@@ -25,6 +25,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             $rootScope.goto = gotoInternal;
             $rootScope.gotoExternal = gotoExternal;
             $scope.releaseName = ""
+            $scope.letter = "";
             $scope.updateReleaseName = updateReleaseName;
             // function to go to an internal link
             // takes in a link variable
