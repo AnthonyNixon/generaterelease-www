@@ -58,7 +58,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             }
 
             function updateReleaseName() {
-              $scope.releaseName = getReleaseName($scope.letter);
+              getReleaseName($scope.letter);
             }
 
             $scope.$watch('letter', function(){
@@ -66,7 +66,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
                 $scope.letter = $scope.letter.charAt(1);
               }
 
-              if ($scope.letter.length == 1){
+              if ($scope.letter.length == 1 &&   !$scope.currentlyUpdating){
                 updateReleaseName();
               }
             });
