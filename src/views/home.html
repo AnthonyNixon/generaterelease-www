@@ -2,7 +2,7 @@
   <md-content ng-controller="searchCtrl">
     <md-input-container style="font-size:1.2em; max-width:90px; ">
         <label>Letter</label>
-        <input ng-model="letter" md-maxlength="1">
+        <input ng-model="letter">
     </md-input-container>
     <md-button type="submit" ng-click="updateReleaseName()" ng-show="releaseName">Refresh</md-button>
     <div ng-show="releaseName">
