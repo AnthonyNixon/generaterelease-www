@@ -56,4 +56,8 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
               $scope.releaseName = getReleaseName($scope.letter);
             }
 
+            $scope.$watch('letter', function(){
+              updateReleaseName();
+            });
+
     }]);

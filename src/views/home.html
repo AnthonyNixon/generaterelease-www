@@ -2,9 +2,9 @@
   <md-content ng-controller="searchCtrl">
     <md-input-container style="font-size:1.2em; max-width:90px; ">
         <label>Letter</label>
-        <input ng-model="letter">
+        <input ng-model="letter" md-maxlength="1">
     </md-input-container>
-    <md-button type="submit" ng-click="updateReleaseName()">Submit</md-button>
+    <md-button type="submit" ng-click="updateReleaseName()">Refresh</md-button>
     <div ng-if="releaseName">
     Maybe name your release <strong>{{releaseName}}</strong>
     </div>
