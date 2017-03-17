@@ -60,7 +60,10 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
               if ($scope.letter.length > 1) {
                 $scope.letter = $scope.letter.charAt(1);
               }
-              updateReleaseName();
+
+              if ($scope.letter.length == 1){
+                updateReleaseName();
+              }
             });
 
     }]);
