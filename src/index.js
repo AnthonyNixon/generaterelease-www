@@ -46,10 +46,15 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             $scope.releaseName = ""
             $scope.letter = "";
             $scope.updateReleaseName = updateReleaseName;
+            $scope.currentlyUpdating = false;
 
             function getReleaseName(letter) {
+              $scope.currentlyUpdating = true;
               $http.get("https://us-central1-releasegenerator.cloudfunctions.net/generaterelease?letter=" + letter)
-                .then(function(response){ $scope.releaseName = response.data; });
+                .then(function(response){
+                  $scope.releaseName = responsef.data;
+                  $scope.currentlyUpdating = false;
+                });
             }
 
             function updateReleaseName() {
