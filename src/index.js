@@ -52,7 +52,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
               $scope.currentlyUpdating = true;
               $http.get("https://us-central1-releasegenerator.cloudfunctions.net/generaterelease?letter=" + letter)
                 .then(function(response){
-                  $scope.releaseName = responsef.data;
+                  $scope.releaseName = response.data;
                   $scope.currentlyUpdating = false;
                 });
             }
