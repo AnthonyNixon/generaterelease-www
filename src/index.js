@@ -50,7 +50,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
 
             function getReleaseName(letter) {
               $scope.currentlyUpdating = true;
-              $http.get("https://us-central1-releasegenerator.cloudfunctions.net/generaterelease?letter=" + letter)
+              $http.get("http://api.releasegenerator.com/generaterelease?letter=" + letter)
                 .then(function(response){
                   $scope.releaseName = response.data;
                   $scope.currentlyUpdating = false;
