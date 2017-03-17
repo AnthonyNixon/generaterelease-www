@@ -57,7 +57,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             }
 
             $scope.$watch('letter', function(){
-              if ()$scope.letter.length > 1) {
+              if ($scope.letter.length > 1) {
                 $scope.letter = $scope.letter.charAt(0);
               }
               updateReleaseName();
