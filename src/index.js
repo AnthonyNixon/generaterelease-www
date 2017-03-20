@@ -45,7 +45,6 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
         function ($scope, $http) {
             $scope.releaseName = ""
             $scope.letter = "";
-            $scope.updateReleaseName = updateReleaseName;
             $scope.currentlyUpdating = false;
             $scope.alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
             $scope.selectLetter = selectLetter;
