@@ -1,5 +1,5 @@
 <md-content ng-controller="searchCtrl">
-  <md-button class="md-icon-button md-primary" aria-label="Use Android" ng-repeat="letterOption in alphabet" ng-click="letter=letterOption">{{letterOption}}</md-button>
+  <md-button class="md-icon-button md-primary" aria-label="Use Android" ng-repeat="letterOption in alphabet" ng-click="selectLetter(letterOption)">{{letterOption}}</md-button>
   <md-button type="submit" ng-click="updateReleaseName()" ng-show="releaseName && !currentlyUpdating" aria-label="refresh"><i class="fa fa-refresh fa-3x fa-fw" aria-hidden="true"></i></md-button>
   <md-button type="submit" ng-show="currentlyUpdating" aria-label="currently refreshing"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></md-button>
   <div ng-show="releaseName">
