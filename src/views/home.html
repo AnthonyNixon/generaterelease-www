@@ -1,4 +1,4 @@
-<div class="container" style="min-width: 25%">
+<div class="container">
   <md-content ng-controller="searchCtrl">
     <md-button class="md-fab md-primary" aria-label="Use Android" ng-repeat="letter in alphabet">{{letter}}</md-button>
     <md-button type="submit" ng-click="updateReleaseName()" ng-show="releaseName && !currentlyUpdating" aria-label="refresh"><i class="fa fa-refresh fa-3x fa-fw" aria-hidden="true"></i></md-button>
