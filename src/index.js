@@ -49,6 +49,10 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             $scope.alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
             $scope.selectLetter = selectLetter;
 
+            $scope.updateReleaseName = function() {
+              getReleaseName($scope.letter);
+            }
+
             function getReleaseName(letter) {
               $scope.currentlyUpdating = true;
               $http.get("https://us-central1-releasegenerator.cloudfunctions.net/generaterelease?letter=" + letter + "&numReleases=10")
