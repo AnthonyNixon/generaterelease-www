@@ -4,6 +4,8 @@
   <md-button type="submit" ng-show="currentlyUpdating" aria-label="currently refreshing"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></md-button>
   <div ng-show="releases">
   Maybe name your release:
-  <strong ng-repeat="releaseName in releases">{{releaseName}}</strong>
+    <div ng-repeat="releaseName in releases">
+      <strong>{{releaseName}}</strong>
+    </div>
   </div>
 </md-content>
