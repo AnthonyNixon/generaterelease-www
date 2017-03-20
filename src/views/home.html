@@ -1,9 +1,6 @@
 <div class="container" style="min-width: 25%">
   <md-content ng-controller="searchCtrl">
-    <md-input-container style="font-size:1.2em; max-width:90px; ">
-        <label>Letter</label>
-        <input ng-model="letter">
-    </md-input-container>
+    <md-button class="md-fab md-primary" aria-label="Use Android" ng-repeat="letter in alphabet">{{letter}}</md-button>
     <md-button type="submit" ng-click="updateReleaseName()" ng-show="releaseName && !currentlyUpdating" aria-label="refresh"><i class="fa fa-refresh fa-3x fa-fw" aria-hidden="true"></i></md-button>
     <md-button type="submit" ng-show="currentlyUpdating" aria-label="currently refreshing"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></md-button>
     <div ng-show="releaseName">

@@ -47,6 +47,7 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
             $scope.letter = "";
             $scope.updateReleaseName = updateReleaseName;
             $scope.currentlyUpdating = false;
+            $scope.alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
             function getReleaseName(letter) {
               $scope.currentlyUpdating = true;
