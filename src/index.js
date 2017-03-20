@@ -59,22 +59,9 @@ angular.module('releaseGeneratorApp', ['ngMaterial', 'ngRoute'])
                 });
             }
 
-            function updateReleaseName() {
-              getReleaseName($scope.letter);
-            }
-
-            $scope.$watch('letter', function(){
-              if ($scope.letter.length > 1) {
-                $scope.letter = $scope.letter.charAt(1);
-              }
-
-              if ($scope.letter.length == 1 &&   !$scope.currentlyUpdating){
-                updateReleaseName();
-              }
-            });
-
             function selectLetter(letter) {
               $scope.letter = letter;
+              getReleaseName($scope.letter);
             }
 
     }]);
